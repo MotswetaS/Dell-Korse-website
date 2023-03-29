@@ -191,8 +191,8 @@ button:hover{
   }
 
 .brands{
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .brand-icon{
@@ -205,7 +205,7 @@ button:hover{
 
 .socials{
     background-color: #128ea7;
-    padding: 2.5rem 0;
+    padding: 2.5rem ;
     color: white;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -265,7 +265,7 @@ button:hover{
 .filler{
     background-color: white;
     margin: 5rem 0;
-    padding: 2.5rem 0;
+    padding: 2.5rem ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -542,12 +542,24 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #fba719;
 }
+/*input {  
+  border: 2px solid #eee;
+  border-radius: 4px;
+}
+input:valid,
+input:in-range {  
+  border-color: green;
+}
+input:invalid,
+input:out-of-range {
+  border-color: red;  
+}*/
 
 .firstfooter{
   font-size: 0.875rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-gap: 20rem;
+  grid-gap: 15rem;
   margin-bottom: 2rem;
  
 }
@@ -571,99 +583,275 @@ input[type=submit]:hover {
   /*media queries*/
   /*Extra small devices(phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    body{
-      margin: 1rem 0;
-
-    }
-    p{
-      font-size: 0.75rem;
-    }
    
-    header nav {
-      display: none;
-    }
-   
-
-  .hero>h1{
-  padding: 0 5rem;
  
 }
-.input-btn{
-  margin-top: 0.5rem;
-}
-#email{
-  padding:0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-}
+
   
+  /*Extra small devices(phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+     
 .mobile-menu {
   display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 3.125rem;
+  
   left: 0;
-  height: calc(100vh - 3.125rem);
+  height: auto;
   width: 100%;
 }
-    #hamburger-icon {
+  #hamburger-icon {
       display: block;
-    }
-    .brand-icon{
+  }
+  .brand-icon{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   justify-content: space-between;
   align-items: center;
-}
-#mainservices{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  padding: 2.5rem 1.25rem;
-  /*
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 1rem;*/
- 
-}
-.service{
-  padding: 1rem;
-}
-.filler{
-  margin-top: 1.25rem;
-  padding: 1rem;
-}
-.auto-slider{
-  display: none;
-}
-.About{
-  margin-top: 1.25rem; 
-}
-.contact-sec{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
   }
-  /*Extra small devices(phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-      
+  .nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .brand-icon{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+  }
+  .Services{
+    margin:0.2rem 0;
+  }
+  .Services>h2{
+    padding-bottom: 0.5rem;
+  }
+  #mainservices{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    
+  }
+  .auto-slider{
+    display: none;
+  }
+
+  .filler{
+    padding:2.5rem;
+    margin: 2.5rem 0;
+  }
+  .About{
+    margin: 2.5rem 0;
+  }
+  .aboutUs>img{
+    width: 20rem;
+    height: 20rem;
+    float:left;
+ }
+ .image>img{
+  width: 20rem;
+  height: 20rem;
+ }
+ .aboutUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ .contact{
+  margin-bottom: 2.5rem;
+ }
+ .contact-sec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ footer{
+  padding: 1rem;
+ }
+  .container{
+    width: 90%;
+  }
+  .container>form{
+    display: flex;
+    flex-direction: column;
+  }  
   }
   /*Small devices(portrait tablets and large phones, 600px and up )*/
   @media only screen and (min-width: 600px) {
+    body{
+      margin: 0 1.25rem;
+    }
+    nav{
+
+      width: 100%;
+      display: none;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .mobile-menu {
+      display: flex;
+      position: absolute;
+      top: 3.125rem;
+      left: 0;
+      height: calc(100vh - 3.125rem);
+      width: 100%;
+    }
+    
+    .open .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    .mobile-menu li {
+      margin-bottom: 0.625rem;
+    }
+  
+    .brand-icon{
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+    }
+    .Services{
+      margin: 2.5rem 0;
+    }
+    #mainservices{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 1rem;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .filler{
+      padding:2.5rem;
+      margin: 2.5rem 0;
+    }
+    .About{
+      margin: 2.5rem 0;
+    }
+    .aboutUs>img{
+      width: 15rem;
+      height: 15rem;
+      float:left;
+   }
+   .image>img{
+    width: 15rem;
+    height: 15rem;
+   }
+   .contact{
+    margin-bottom: 2.5rem;
+   }
+   footer{
+    padding: 1rem;
+   }
+    .container{
+      width: 90%;
+    }
     
   }
   /*Medium devices(Landscape tablets,760px and up) */
   @media only screen and (min-width: 726px) {
+    nav{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .brand-icon{
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+    }
+    .Services{
+      margin: 2.5rem 0;
+    }
+    #mainservices{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 1rem;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .filler{
+      padding:2.5rem;
+      margin: 2.5rem 0;
+    }
+    .About{
+      margin: 2.5rem 0;
+    }
+    .aboutUs>img{
+      width: 15rem;
+      height: 15rem;
+      float:left;
+   }
+   .image>img{
+    width: 15rem;
+    height: 15rem;
+   }
+   .contact{
+    margin-bottom: 2.5rem;
+   }
+   footer{
+    padding: 1rem;
+   }
+    .container{
+      width: 90%;
+    }
     
+
   }
   /*Large devices(laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    nav{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .brand-icon{
+      display: flex;
+      flex-direction: row;
+      margin-right: 2rem;
+    }
+    .Services{
+      margin: 5rem 0;
+    }
+    #mainservices{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 1rem;
+      padding:5rem 2.5rem;
+    }
+
+    .filler{
+      padding:5rem;
+      margin: 5rem 0;
+    }
+    .About{
+      margin: 5rem 0;
+    }
+    .aboutUs>img{
+      width: 20rem;
+      height:20rem;
+      float:left;
+   }
+   .image>img{
+    width: 20rem;
+    height: 20rem;
+   }
+   
+   .contact{
+    margin-bottom: 5rem;
+   }
+   footer{
+    padding: 2.5rem 1.25rem;
+   }
+    .container{
+      padding:1.25rem;
+    width: 70%;
+    height: auto;
+    }
+
     
   }
   /*Extra large devices (large laptops and dektops, 12000px  and up) */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 1200px) {
     
   }

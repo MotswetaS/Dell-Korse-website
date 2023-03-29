@@ -47,10 +47,14 @@
             <p>
                 Sales. Repair. Antivirus. OS Installation.Gadgets. Phones
             </p>
-            <div class="input-btn">
-                <input type="email" name="email" id="email" placeholder="Enter your email">
-                <button class="btn">Subscribe</button>
-            </div>
+            <form action="contact.php" method="post">
+                <div class="input-btn">
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe">
+                    
+                </div>
+            </form>
+            
         </div>
     </main>
     <section class="Brands">
@@ -238,16 +242,16 @@
                 </h4>
                 <p>Contact us and we will reach back to you in less than 24 hours.</p>
                 <div class="form1">
-                    <form action="" method="get">
+                    <form action="contact.php" method="post">
                         <div class="name">
                             <label for="name">Name</label>
-                            <input type="text" name="text" id="text" placeholder="Enter your name">
+                            <input type="text" name="text" id="name" placeholder="Enter your name" required>
                         </div>
     
                         <div class="email">
                             <label for="email">Email Adress</label>
                             <br>
-                            <input type="email" name="email" id="email" placeholder="Enter your email">
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="textarea">
                             <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Leave us a message"></textarea>
@@ -264,7 +268,7 @@
     </section>
     <footer>
         <div class="container">
-            <form action="action_page.php" id="footerform">
+            <form action="contact.php" id="footerform" name="myForm" method="post"">
                 <div class="container1">
                   <h4>Subscribe to our Newsletter</h4>
                   <p>Get the best monthly deals straight to your email.</p>
@@ -273,7 +277,7 @@
                     
                 <div class="container2" >
 
-                    <input type="email" placeholder="Enter your email " name="mail" id="email" required>
+                    <input type="email" placeholder="Enter your email " name="Email" id="email" required>
                     <br>
                     <label>
                       <input type="checkbox" checked="checked" name="subscribe"> Monthly Newsletter
@@ -281,7 +285,7 @@
                   </div>
                 
                   <div class="container3">
-                    <input type="submit" value="Subscribe">
+                    <input type="submit" value="Submit">
                   </div>
                 </div>
               
