@@ -78,18 +78,12 @@ header {
     color: black;
     text-decoration: none;
   }
-  /*
-  ul li {
-    padding: 0.313rem;
-    margin-left: 5rem;
-  }*/
   
   ul li:hover {
     transform: scale(1.1);
     transition: 0.3s;
   }
   .mobile-menu {
-    
     padding-top: 1rem;
     display: none;
     position: absolute;
@@ -249,7 +243,7 @@ button:hover{
 }
 
 .service{
-    width: 100%;
+    width: 90%;
     height:23rem;
     display:flex;
     flex-direction: column;
@@ -400,104 +394,33 @@ div#slider figure {
 .aboutUs>p{
   text-align: justify;
 }
-/*parallax scroll*/
-.parallax-scroll{
-  background-color: white;
-  height: 50rem;
-  position: absolute;
-  padding: 2.5rem 1.25rem;
-}
-.parallax-scroll>img{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  position: relative;
-}
 
-
-/*Contact us*/
-.contact{
-  background-color: white;
-  padding: 2.5rem 1.25rem;
-  margin-bottom: 5rem;
-}
-.contact>h2{
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-sec{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}
-.name{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.contactform>h4,p{
-  margin-bottom: 1rem;
-}
-.contactform{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.form1>form{
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-items: flex-start;
-  background-color:  rgba(7, 136, 136, 0.1);
-}
-form>#text,#textarea,#email{
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border:1px solid rgb(165, 164, 164);
- 
-  width: 100%;
-}
-.form1{
-  width: 100%;
-}
-label{
-  font-weight: 600;
-  color: rgb(44, 44, 44);
-}
-#textarea{
-  resize: none;
-  margin: 1rem 0 0.5rem 0;
-  border:1px solid rgb(165, 164, 164);
-}
-#text{
-  width: 50%;
-  border:1px solid rgb(165, 164, 164);
-  padding: 0.5rem;
-}
-.email{
-  width: 50%;
-}
 
 /*Footer*/
 footer{
   background-color:#128ea7;
   padding: 2.5rem 1.25rem;
   color: white;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
   margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-items: center;
+
 }
 footer>p{
   margin: 1.25rem 0;
 }
 
+
 /* Add some padding and a grey background color to containers */
 .container {
   background-color: rgba(255, 255, 255, 0.76);
   padding:1.25rem;
-  width: 70%;
+  width: 50%;
   height: auto;
   color: black;
   
@@ -531,18 +454,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #fba719;
 }
-/*input {  
-  border: 2px solid #eee;
-  border-radius: 4px;
-}
-input:valid,
-input:in-range {  
-  border-color: green;
-}
-input:invalid,
-input:out-of-range {
-  border-color: red;  
-}*/
+
 
 .firstfooter{
   font-size: 0.875rem;
@@ -620,12 +532,17 @@ input:out-of-range {
 .sociallinks>ul>li>i{
   padding-right: 2rem;
 }
+
+footer>.container{
+  margin-top: 3rem;
+}
   /*media queries*/
+
 
   /*Extra small devices(phones, 600px and down) */
   @media only screen and (max-width: 600px) {
      
-.mobile-menu {
+/*.mobile-menu {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -633,10 +550,11 @@ input:out-of-range {
   left: 0;
   height: auto;
   width: 100%;
-}
+}*/
   #hamburger-icon {
     display: block;
   }
+  
   .brand-icon{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -736,7 +654,7 @@ input:out-of-range {
   }
   
   .firstfooter{
-    background-color: rgb(155, 155, 7);
+    
     display: flex;
     flex-direction: column;
     height: rem;
@@ -783,6 +701,7 @@ input:out-of-range {
     text-align: center;
    
   }
+}
   /*Small devices(portrait tablets and large phones, 600px and up )*/
   @media only screen and (min-width: 600px) {
     body{
@@ -794,9 +713,7 @@ input:out-of-range {
       display: none;
       grid-template-columns: repeat(2,1fr);
     }
-    header nav {
-      display: none;
-    }
+    
   
     #hamburger-icon {
       display: block;
@@ -849,6 +766,8 @@ input:out-of-range {
    }
    footer{
     padding: 1rem;
+    display:flex;
+    flex-direction: column-reverse;
    }
     .container{
       width: 90%;
@@ -877,6 +796,7 @@ input:out-of-range {
       text-align: center;
      
   }
+}
   /*Medium devices(Landscape tablets,760px and up) */
   @media only screen and (min-width: 726px) {
     body{
@@ -891,6 +811,9 @@ input:out-of-range {
       display: grid;
       grid-template-columns: repeat(2,1fr);
     }
+    #hamburger-icon{
+      display: none;
+    }
     
     .brand-icon{
       display: flex;
@@ -903,12 +826,9 @@ input:out-of-range {
     #mainservices{
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      grid-gap: 1rem;
+      grid-gap: 2rem;
       padding:5rem 2.5rem;
-    }
-    .service>img{
-      width: 1rem;
-    
+   
     }
     .filler{
       padding:5rem;
@@ -969,7 +889,7 @@ input:out-of-range {
           translateY(100px) rotate(-360deg);
       }
     }
-    }
+    
     
   }
   /*Extra large devices (large laptops and dektops, 12000px  and up) */
@@ -991,7 +911,7 @@ input:out-of-range {
     margin: 5rem 0;
   }
   #mainservices{
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1rem;
@@ -1020,6 +940,9 @@ input:out-of-range {
  }
  footer{
   padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
  }
   .container{
     padding:1.25rem;
@@ -1051,12 +974,15 @@ input:out-of-range {
   @keyframes border{
     0%{
       transform: rotate(0deg)
-        translateY(100px) rotate(0deg);
+        translateY(50px) rotate(0deg);
     }
     100%{
       transform: rotate(360deg)
-        translateY(100px) rotate(-360deg);
+        translateY(50px) rotate(-360deg);
     }
   }
+  .mobile-menu{
+    display:none;
   }
-  }
+}
+  
